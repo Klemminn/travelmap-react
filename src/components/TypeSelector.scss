@@ -1,0 +1,36 @@
+.type-selector-component {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  color: var(--theme-text);
+  display: flex;
+  justify-content: space-between;
+  width: 60vw;
+  margin-left: 25vw;
+
+  .place-type {
+    margin-top: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+    cursor: pointer;
+
+    &.selected, .selected {
+      color: orangered;
+    }
+
+    svg {
+      font-size: 1.5em;
+    }
+
+    .subtypes {
+      font-size: 0.7em;
+      color: var(--theme-text);
+
+      &>div {
+        padding-left: 0.5em;
+      }
+    }
+  }
+}

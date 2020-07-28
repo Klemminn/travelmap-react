@@ -1,0 +1,10 @@
+@import 'variables';
+@import 'mixins';
+
+:root.dark {
+  @include spread-map($theme-dark);
+}
+
+:root.light {
+  @include spread-map($theme-light);
+}

@@ -1,0 +1,44 @@
+.place-sidebar-component {
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 20vw;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 4em;
+
+  .search-input {
+    width: 96%;
+  }
+
+  .place-tile {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--theme-text);
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 0.3em;
+
+    .info {
+      .name {
+        font-size: 1.2em;
+      }
+      .type {
+        font-size: 0.9em;
+        margin-top: 0.5em;
+        text-transform: capitalize;
+      }
+      .address {
+        font-size: 0.9em;
+        min-height: 2em;
+      }
+    }
+
+    .image {
+      background-size: cover;
+      width: 40%;
+      border-radius: 10%;
+    }
+  }
+}

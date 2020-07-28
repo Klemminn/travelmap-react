@@ -1,0 +1,7 @@
+{
+    "editor.tabSize": 2,
+    "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "editor.detectIndentation": false,
+    "javascript.validate.enable": false,
+    "eslint.validate": ["typescript", "typescriptreact"]
+}
