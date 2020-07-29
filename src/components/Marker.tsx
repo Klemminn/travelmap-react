@@ -4,7 +4,7 @@ import { useStateLink } from '@hookstate/core'
 
 import { Place } from 'types'
 import { PhotoUtils } from 'utils'
-import { HoverState, setSelected } from 'states'
+import { HoverState, setSelected, setHover } from 'states'
 
 import './Marker.scss'
 
@@ -14,20 +14,22 @@ type MarkerProps = {
 
 const Marker = ({ place }: MarkerProps) => {
   const hover = useStateLink(HoverState).get()
-  const iconClasses = ['icon']
+  const classes = ['marker-component']
   if (hover === place.code) {
-    iconClasses.push('hover')
+    classes.push('hover')
   }
 
   return (
     <MapboxMarker
       key={place.id}
-      className='marker-component'
+      className={classes.join(' ')}
       coordinates={[place.longitude, place.latitude]}
       onClick={() => setSelected(place)}
+      onMouseEnter={() => setHover(place.code)}
+      onMouseLeave={() => setHover('')}
     >
       <div
-        className={iconClasses.join(' ')}
+        className='icon'
         style={{ backgroundImage: `url(${PhotoUtils.getImage(place.files[0].image, 'small')}` }}
       >
         <div className='name'>

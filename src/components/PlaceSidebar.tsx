@@ -35,13 +35,13 @@ const PlaceSidebar = ({ ...rest }: PlaceSidebarProps) => {
               {place.name}
             </div>
             <div className='type'>
-              {place.placeType}
+              {place.placeTypeName}
             </div>
             <div className='address'>
               {place.address}
             </div>
           </div>
-          <div className='image' style={{ backgroundImage: `url(${PhotoUtils.getImage(place.files[0].image, 'small')})` }} />
+          <div className='image' style={{ backgroundImage: `url(${PhotoUtils.getImage(place.files[0]?.image || '', 'small')})` }} />
         </div>
       ))}
     </div>

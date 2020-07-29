@@ -12,5 +12,6 @@ export type Place = {
   longitude: number,
   name: string,
   placeType: string,
+  placeTypeName: string,
   files: PlaceFile[]
 }

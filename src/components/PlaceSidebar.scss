@@ -3,12 +3,14 @@
   left: 0;
   height: 100%;
   width: 20vw;
-  z-index: 1;
+  z-index: 5;
   background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 4em;
+  margin-top: 4em;
+  overflow-y: auto;
 
   .search-input {
-    width: 96%;
+    width: 92%;
+    margin-left: 4%;
   }
 
   .place-tile {
@@ -21,6 +23,8 @@
     margin-bottom: 0.3em;
 
     .info {
+      max-width: 60%;
+      
       .name {
         font-size: 1.2em;
       }

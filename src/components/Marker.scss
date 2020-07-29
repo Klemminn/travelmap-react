@@ -1,12 +1,27 @@
 .marker-component {
+
+  &.hover {
+    z-index: 4 !important;
+
+    .icon {
+      transform: scale(3.5);
+
+      .name {
+        opacity: 1;
+      }
+    }
+  }
+
   .icon {
     height: 4em;
     width: 4em;
     border-radius: 50%;
     background-size: cover;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 0.7em;
     cursor: pointer;
     
     transition: all 0.4s ease-in-out;
@@ -19,12 +34,7 @@
       transition: opacity 0.4s ease-in-out;
       text-shadow: -1px 1px 1px black, 0px -1px 1px black;
     }
-    &:hover, &.hover {
-      transform: scale(3.5);
 
-      .name {
-        opacity: 1;
-      }
-    }
+    
   }
 }
