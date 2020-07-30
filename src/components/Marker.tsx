@@ -30,7 +30,7 @@ const Marker = ({ place }: MarkerProps) => {
     >
       <div
         className='icon'
-        style={{ backgroundImage: `url(${PhotoUtils.getImage(place.files[0].image, 'small')}` }}
+        style={{ backgroundImage: `url(${PhotoUtils.getImage(place.files[0]?.image || '', 'small')}` }}
       >
         <div className='name'>
           {place.name}
